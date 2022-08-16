@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Airflow DAG generator for Secret Net Server DB</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css//bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="jumbotron container">
+          <br>
+          <h1 class="display-4">Генератор DAG  для Apache Airflow</h1>
+          <p class="lead">Генератор реализует автоматическое создание узкоспециализированного
+              DAG (Directed Acyclic Graph), применяемого в ПО Apache Airflow.</p>
+          <p class="lead">
+              DAG предназначен для получения событий из базы данных сервера Secret Net Studio и последующей
+              отправки этих данных в формате CEF сообщения на сервер сбора данных syslog или в SIEM систему. </p>
+          <hr class="my-4">
+          <p>Форма создана для упрощения внесения данных в DAG. При желании можно внести все данные в
+              сгенерированные файлы вручную.</p>
+          <p class="lead">
+                <form method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ form }}
+                    </table>
+                <br>
+                <p><input class="btn btn-primary btn-lg" type="submit" value="Сгенерировать"> </p>
+                </form>
+          </p>
+    </div>
+</body>
+</html>
