@@ -1,3 +1,4 @@
+## This project is licensed under the terms of the MIT license
 # Генератор Apache Airflow DAG для получения данных из сервера СЗИ Secret Net
 Генератор реализует автоматическое создание узкоспециализированного
 DAG (Directed Acyclic Graph), применяемого в ПО Apache Airflow.
