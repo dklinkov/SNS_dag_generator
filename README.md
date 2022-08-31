@@ -108,7 +108,7 @@ with DAG(dag_id='dag_name', default_args=args,
 После этого в конец файла необходимо добавить:
 
 ```python
-if __name__ == "__main":
+if __name__ == "__main__":
     sns_etl()
 ```
 
